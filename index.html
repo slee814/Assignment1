@@ -69,6 +69,7 @@
 			background-color:#A8E6CF;
 			display:inline-block;
 			position: relative;
+
 		}
 		
 		#squarebox{
@@ -207,6 +208,7 @@
 			var g = 0;
 			var b = 0; 
 			nameButton.onclick = function(){
+
 				box1disp.style.backgroundColor = "red"; 
 			}
 		</script>
@@ -251,6 +253,7 @@
 					disp.style.backgroundImage = "url(http://placekitten.com/500/300)";
 					myButton.style.width = buttonWidth + "px";
 					myButton.style.height = buttonHeight + "px";
+
 				}
 			</script>
 			
@@ -267,9 +270,14 @@
 			var anotherButton = document.getElementById("button1");
 			var anotherdisp = document.getElementById("banner2");
 			var deleteButton = document.getElementById("delete");
+			var buttonWidth = 100;
+			var buttonHeight = 100;
+
 			anotherButton.onclick = function(){		
 				anotherButton.style.width = buttonWidth + "px";
 				anotherButton.style.height = buttonHeight + "px"
+				buttonWidth = buttonWidth + 10;
+				buttonHeight = buttonHeight + 5;
 			}
 			
 			deleteButton.onclick = function(){
