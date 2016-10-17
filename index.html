@@ -69,7 +69,6 @@
 			background-color:#A8E6CF;
 			display:inline-block;
 			position: relative;
-
 		}
 		
 		#squarebox{
@@ -182,12 +181,35 @@
     <body>
 		<div id ='banner1'>
 			<h2 id ='tagline1'>Welcome to Iris' Site</h2>
+			<button id ='cloudbutton'>Clouds</button>
 			<img class ='profile_pic' src="http://imgur.com/a0yh9u0.png" />	
 		</div>
+		<script>
+			var cloudButton = document.getElementById("cloudbutton");
+			var banner1 = document.getElementById("banner1");
+			cloudButton.onclick = function(){
+				banner1.style.backgroundImage = "url(http://media02.hongkiat.com/beautiful-clouds/giant-cloud.jpg)";
+			}
+		</script>
+		
 		
 		<div id ='box1'>
 			<h2 id='name'>Iris Lee</h2>
+			<button id ='namebutton'>Change this box to red!</button>
 		</div>
+		
+		<script>
+			var nameButton = document.getElementById("namebutton");
+			var box1disp = document.getElementById("box1");
+			var buttonWidth = 100;
+			var buttonHeight = 100;
+			var r = 0;
+			var g = 0;
+			var b = 0; 
+			nameButton.onclick = function(){
+				box1disp.style.backgroundColor = "red"; 
+			}
+		</script>
 		
 		<div id='box2'>
 			<div class='rel' id='position1'><div class='abs'>Web Technology</div></div>
@@ -210,12 +232,50 @@
 
 			</div>
 			<div id='squarebox'>
+			
+			<button id ='button'>Click to see picture</button>
 			</div>
+			<script>
+				var myButton = document.getElementById("button");
+				var disp = document.getElementById("squarebox");
+				var buttonWidth = 100;
+				var buttonHeight = 100;
+				var r = 0;
+				var g = 0;
+				var b = 0; 
+				myButton.onclick = function(){	
+					r = Math.round(Math.random()*255);
+					g = Math.round(Math.random()*255);
+					b = Math.round(Math.random()*255);
+					
+					disp.style.backgroundImage = "url(http://placekitten.com/500/300)";
+					myButton.style.width = buttonWidth + "px";
+					myButton.style.height = buttonHeight + "px";
+				}
+			</script>
+			
 
 		</div>
 		
 		<div id='banner2'>
 			<h2 id ='tagline2'>Thank You for Visiting!</h2>
+			<button id ='button1'>Click here to see how big this button can expand to</button>
+			<button id ='delete'> Click to delete everything </button>
 		</div>
+		
+		<script>
+			var anotherButton = document.getElementById("button1");
+			var anotherdisp = document.getElementById("banner2");
+			var deleteButton = document.getElementById("delete");
+			anotherButton.onclick = function(){		
+				anotherButton.style.width = buttonWidth + "px";
+				anotherButton.style.height = buttonHeight + "px"
+			}
+			
+			deleteButton.onclick = function(){
+				 document.body.innerHTML = "";
+			}
+		</script>
+		
 	</body>
 </html>
