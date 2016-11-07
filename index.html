@@ -177,6 +177,44 @@
 			position:absolute;
 			margin: 3% 10% 10% 50%;
 		}
+		
+		@media only screen and (max-width:480px){
+				#box1{
+					background-color:#f9f990;
+				}
+				
+				#box2{
+					background-color:#f9f990;
+				}
+				
+				#box3{
+					background-color:#f9f990;
+				}
+				
+				#banner1{			
+					background-image:url(http://placekitten.com/500/500);			
+				}
+				
+				
+		}
+			
+		@media only screen and (max-width:960px) and (min-width:480px){
+				#box1{
+					background-color:#90baf9;
+				}
+				
+				#box2{
+					background-color:#90baf9;
+				}
+				
+				#box3{
+					background-color:#90baf9;
+				}
+				
+				#banner1{			
+					background-image:url(http://placekitten.com/1000/1000);			
+				}
+		}
 	</style>
 	
     <body>
@@ -270,14 +308,10 @@
 			var anotherButton = document.getElementById("button1");
 			var anotherdisp = document.getElementById("banner2");
 			var deleteButton = document.getElementById("delete");
-			var buttonWidth = 100;
-			var buttonHeight = 100;
 
 			anotherButton.onclick = function(){		
 				anotherButton.style.width = buttonWidth + "px";
 				anotherButton.style.height = buttonHeight + "px"
-				buttonWidth = buttonWidth + 10;
-				buttonHeight = buttonHeight + 5;
 			}
 			
 			deleteButton.onclick = function(){
